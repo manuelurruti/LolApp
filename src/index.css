@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Friz Quadrata';
+  src: url("../fonts/fritz.ttf") format('truetype');
+}
+*{
+  font-family: 'Friz Quadrata';
+
+}
