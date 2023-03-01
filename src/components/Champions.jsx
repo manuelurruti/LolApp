@@ -9,25 +9,54 @@ import 'animate.css/animate.min.css';
 
 function Champions() {
   const [champions, setChampions] = useState([]);
+  const [query, setQuery] = useState('');
+
 
   useEffect(() => {
-    axios.get(`https://ddragon.leagueoflegends.com/cdn/11.4.1/data/es_AR/champion.json`)
-      .then(res => {
-        const championsData = Object.values(res.data.data);
-        setChampions(championsData);
-      })
-      .catch(err => console.log(err));
-  }, []);
+    const fetchData = async () => {
+      try {
+        await axios.get(`https://ddragon.leagueoflegends.com/cdn/11.4.1/data/es_AR/champion.json`)
+          .then(res => {
+            const championsData = Object.values(res.data.data);
+            setChampions(championsData);
+          })
+      } catch (error) {
+        console.error(error)
+      }
+    }
+
+    fetchData()
+  }, [])
+
 
   useEffect(() => {
-    new WOW.WOW().init();
-  }, []);
+    const fetchDatax = async () => {
+      try {
+        await axios.get(`https://ddragon.leagueoflegends.com/cdn/11.4.1/data/es_AR/champion/${query}.json`)
+          .then(res => {
+            const championsData = Object.values(res.data.data);
+            setChampions(championsData);
+          })
+      } catch (error) {
+        console.error(error)
+      }
+    }
+
+    fetchDatax()
+  }, [query])
+
+
+
+
+
 
   return (
     <div>
       <form method="GET" className='asd'>
-        <input type="search" placeholder='Buscar personaje' ></input>
+        <input type="text" onChange={event => setQuery(event.target.value)} value={query} />
+
       </form>
+
       <div className='d-flex justify-content-center flex-wrap m-4 align-items-center animate__animated animate__slideInRight'>
         {champions.map(champion => (
           <div key={champion.id} champion={champion} className="m-4 borderbox">

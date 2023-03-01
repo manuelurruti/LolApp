@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .backGroundColor{
-  background-image: url('../../public/header.jpg');
+  background-image: url('../../header.jpg');
   height: auto;
   display: flex;
   justify-content: center;
