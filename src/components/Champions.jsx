@@ -23,6 +23,7 @@ function Champions() {
       } catch (error) {
         console.error(error)
       }
+
     }
 
     fetchData()
@@ -32,15 +33,18 @@ function Champions() {
   useEffect(() => {
     const fetchDatax = async () => {
       try {
+
         await axios.get(`https://ddragon.leagueoflegends.com/cdn/11.4.1/data/es_AR/champion/${query}.json`)
           .then(res => {
             const championsData = Object.values(res.data.data);
             setChampions(championsData);
+
           })
       } catch (error) {
         console.error(error)
       }
     }
+
 
     fetchDatax()
   }, [query])
@@ -49,11 +53,10 @@ function Champions() {
 
 
 
-
   return (
     <div>
       <form method="GET" className='asd'>
-        <input type="text" onChange={event => setQuery(event.target.value)} value={query} />
+        <input type="text" onChange={event => setQuery(event.target.value.charAt(0).toUpperCase() + event.target.value.slice(1).toLowerCase())} value={query} />
 
       </form>
 
