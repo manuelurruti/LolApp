@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .mi-div {
-      background-image: url('../../background.jpg');
+      background-image: url('../../public/background.jpg');
       background-position:center;
   background-attachment: fixed;
   background-size: 100%;

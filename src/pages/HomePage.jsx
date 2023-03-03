@@ -3,7 +3,7 @@ import React from 'react'
 import Champions from '../components/Champions'
 import "./HomePage.css"
 
-export const HomePage = () => {
+function HomePage() {
 
   return (
     <div className='mi-div'>
@@ -12,3 +12,4 @@ export const HomePage = () => {
     </div>
   )
 }
+export default HomePage
