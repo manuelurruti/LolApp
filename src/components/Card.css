@@ -23,6 +23,7 @@
     color: rgb(101, 91, 11);
     border: 2px solid;
     animation: gradientMove 5s linear infinite; /* animación */
+    border-radius: 3%;
     transition: transform 0.3s ease-in-out;
     background-image: linear-gradient(
         to right,
