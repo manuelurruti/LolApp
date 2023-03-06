@@ -9,6 +9,7 @@ function HomePage() {
     <div className='mi-div'>
 
       <Champions></Champions>
+
     </div>
   )
 }

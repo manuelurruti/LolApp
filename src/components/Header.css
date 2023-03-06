@@ -1,18 +1,17 @@
-*{
-  padding:0px;
-  margin:0px;
-  box-sizing: border-box;
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
-.backGroundColor{
-  background-image: url('../../header.jpg');
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.backGroundColor {
+    background-image: url("../../header.jpg");
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.font{
-  color:rgb(101, 91, 11);
-  text-shadow: 2px 2px 2px rgb(26, 47, 13);
-
+.font {
+    color: rgb(101, 91, 11);
+    text-shadow: 2px 2px 2px rgb(26, 47, 13);
 }

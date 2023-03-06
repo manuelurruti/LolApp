@@ -1,37 +1,51 @@
-*{
-  margin: 0px;
-  padding:0px;
-  box-sizing: border-box;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
-.fonche{
-    color:rgb(0, 0, 0);
-  margin:15px;
+.fonche {
+    color: rgb(0, 0, 0);
+    margin: 15px;
     animation: gradientMove 5s linear infinite; /* animación */
-  transition: transform 0.3s ease-in-out;
-
+    transition: transform 0.3s ease-in-out;
 }
-.fontSize{
-  font-size: 20px;
-  color:rgb(152, 136, 17);
+.fontSize {
+    font-size: 20px;
+    color: rgb(152, 136, 17);
 }
-.borderbox{
-  background-color: #f1f1f155;
-   color:rgb(101, 91, 11);
-  border: 2px solid;
+.borderbox {
+    background-color: #f1f1f155;
+    color: rgb(101, 91, 11);
+    border: 2px solid;
     animation: gradientMove 5s linear infinite; /* animación */
-  transition: transform 0.3s ease-in-out;
-    background-image: linear-gradient(to right, #0b0b2a, #0a0a4bb9, #0a0a4bbb, #0b0b4f9a); /* gradiente de fondo */
-
+    transition: transform 0.3s ease-in-out;
+    background-image: linear-gradient(
+        to right,
+        #0b0b2a,
+        #0a0a4bb9,
+        #0a0a4bbb,
+        #0b0b4f9a
+    ); /* gradiente de fondo */
 }
 @keyframes gradientMove {
-  0% {background-position: 0% 50%} /* posición inicial */
-  100% {background-position: 100% 50%} /* posición final */
+    0% {
+        background-position: 0% 50%;
+    } /* posición inicial */
+    100% {
+        background-position: 100% 50%;
+    } /* posición final */
 }
-.borderbox:hover{
- transition: 0.8s;
-  transform: scale(1.1);
+.borderbox:hover {
+    transition: 0.8s;
+    transform: scale(1.1);
 }
-.asd{display:flex;
-justify-content: center;}
-
+.asd {
+    display: flex;
+    justify-content: center;
+}
+.asdasd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

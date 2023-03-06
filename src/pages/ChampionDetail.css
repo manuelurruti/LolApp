@@ -3,9 +3,10 @@
     margin: 0px;
     box-sizing: border-box;
 }
-.mi-div {
+.mi-divx {
     background-image: url("../../background.jpg");
-
+    width: 100% !important;
+    height: 92vh;
     background-position: center;
     background-attachment: fixed;
     background-size: 100%;

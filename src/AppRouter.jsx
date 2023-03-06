@@ -11,9 +11,9 @@ export const AppRouter = () => {
       <Route path="/" element={<Header />}>
         <Route index element={<HomePage />} />
         <Route path="/champion/:ChampionName" component={ChampionDetail} element={<ChampionDetail />} />
+
+
       </Route>
-
-
 
       <Route path="*" element={<Navigate to="/" />}></Route>
     </Routes >
