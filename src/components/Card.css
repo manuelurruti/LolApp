@@ -3,7 +3,10 @@
     padding: 0px;
     box-sizing: border-box;
 }
-
+.textYimg {
+    display: flex;
+    flex-direction: column;
+}
 .fonche {
     color: rgb(0, 0, 0);
     margin: 15px;
@@ -13,6 +16,7 @@
 .fontSize {
     font-size: 20px;
     color: rgb(152, 136, 17);
+    text-shadow: 2px 2px 2px rgb(26, 47, 13);
 }
 .borderbox {
     background-color: #f1f1f155;
@@ -48,4 +52,46 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.fuentex {
+    height: 100%;
+    font-size: 35px;
+    text-shadow: 2px 2px 2px rgb(14, 26, 7);
+}
+.divcard {
+    background-color: #f1f1f155;
+    color: rgb(101, 91, 11);
+    border: 2px solid;
+    animation: gradientMove 5s linear infinite; /* animación */
+    transition: transform 0.3s ease-in-out;
+    width: 70%;
+    background-image: linear-gradient(
+        to right,
+        #b1b1b1,
+        #7d7d7d,
+        rgba(113, 113, 113, 0.69),
+        #3b3b3b
+    );
+}
+.fontSizeX {
+    font-size: 27px;
+    color: rgb(152, 136, 17);
+    text-shadow: 2px 2px 2px rgb(26, 47, 13);
+}
+.fontSizeXX {
+    font-size: 66px;
+    color: rgb(152, 136, 17);
+    text-shadow: 2px 2px 2px rgb(26, 47, 13);
+}
+.posicionando {
+    display: flex;
+    justify-content: space-around;
+}
+.imagesx {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 15%;
+}
+.image {
+    border-radius: 3%;
 }
