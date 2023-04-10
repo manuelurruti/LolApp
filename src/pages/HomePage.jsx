@@ -6,10 +6,10 @@ import "./HomePage.css"
 function HomePage() {
 
   return (
-    <div className='mi-div'>
-
+<div className='jejejx'> 
+    <div className='d-flex justify-content-center  mi-div'>
       <Champions></Champions>
-
+      </div>
     </div>
   )
 }

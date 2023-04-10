@@ -10,16 +10,18 @@ import 'animate.css/animate.min.css';
 function Champions() {
   const [champions, setChampions] = useState([]);
   const [query, setQuery] = useState('');
-
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(`https://ddragon.leagueoflegends.com/cdn/11.4.1/data/es_AR/champion.json`);
         const championsData = Object.values(response.data.data);
         setChampions(championsData);
+        setIsLoading(false)
       } catch (error) {
         console.error(error);
-        setChampions([]); // Limpiamos el estado en caso de error
+        setChampions([])
+        setIsLoading(false) // Limpiamos el estado en caso de error
       }
     }
 
@@ -55,7 +57,15 @@ function Champions() {
       <div className='asdasd'>
         <input type="text" onChange={event => setQuery(event.target.value)} value={query} placeholder="Busca tu campeon!" />
       </div>
-
+      {isLoading ? ( // Muestra la imagen de carga si isLoading es verdadero
+        <div className="d-flex justify-content-center align-items-center">
+          <img src="../../logo.jpg" alt="Loading" />
+        </div>
+      ) : (
+      filteredChampions.length === 0 ? (
+    
+      <p className='d-flex justify-content-center align-items-center fontwhtie'>No se encontraron campeones que coincidan con la búsqueda.</p>
+    ) : (
 
       <div className='d-flex justify-content-center flex-wrap m-4 align-items-center animate__animated animate__slideInRight'>
 
@@ -76,6 +86,7 @@ function Champions() {
         }
 
       </div>
+      ))}
     </div >
   );
 }

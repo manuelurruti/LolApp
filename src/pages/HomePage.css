@@ -5,9 +5,14 @@
 }
 .mi-div {
     background-image: url("../../background.jpg");
-
+  min-height: 100vh;
+    min-width: 180vh;
     background-position: center;
     background-attachment: fixed;
     background-size: 100%;
     background-repeat: no-repeat;
+}
+.jejejx{
+    height: 100%;
+    width: 100%;
 }

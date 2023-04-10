@@ -49,10 +49,17 @@
     display: flex;
     justify-content: center;
 }
+.fontwhtie{
+  color:black
+  ; font-size: 50px;
+  text-shadow: 1px 1px 2px white;
+}
 .asdasd {
     display: flex;
     justify-content: center;
     align-items: center;
+
+ height:auto;
 }
 .fuentex {
     height: 100%;
